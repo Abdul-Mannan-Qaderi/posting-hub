@@ -20,10 +20,23 @@
 
 
         <ul class="flex items-center">
-            <li><a class="p-3" href="">Fahad</a></li>
-            <li><a class="p-3" href="">Login</a></li>
-            <li><a class="p-3" href="{{route('register')}}">Register</a></li>
-            <li><a class="p-3" href="">Logout</a></li>
+
+            @auth
+                <li><a class="p-3" href="">{{ auth()->user()->username }}</a></li>
+
+                <li>
+                    <form action="{{ route('logout') }}" method="POST" class="inline p-3">
+                        @csrf
+                        <button type="submit" class="bg-transparent border-none cursor-pointer">Logout</button>
+                    </form>
+                </li>
+
+            @endauth
+
+            @guest
+                <li><a class="p-3" href="{{ route('login') }}">Login</a></li>
+                <li><a class="p-3" href="{{ route('register') }}">Register</a></li>
+            @endguest
         </ul>
     </nav>
     @yield('content')

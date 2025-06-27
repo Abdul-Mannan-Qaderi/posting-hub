@@ -5,6 +5,9 @@
     <div class="flex justify-center">
         <div class="w-4/12 bg-white p-6 rounded-lg">
             <form action="{{ route('register') }}" method="POST">
+                  <h1 class="mb-4 text-2xl">Register Here</h1>
+
+
                 @csrf
                 <div class="mb-4">
                     <label for="name" class="sr-only">Name</label>
@@ -73,7 +76,7 @@
                     @enderror
                 </div>
 
-                <button class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Register</button>
+                <button class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">REGISTER</button>
             </form>
         </div>
     </div>
