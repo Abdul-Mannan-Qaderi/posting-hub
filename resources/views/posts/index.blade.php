@@ -9,7 +9,7 @@
                 <div class="mb-2">
                     <label for="body">Body</label>
                     <textarea name="body" id="body" rows="4" cols="30"
-                        class="bg-gray-100 border-2 border-gray-300 focus:outline-gray-300 w-full p-4 rounded-lg"
+                        class="outline-0 transition-all duration-300 focus:border-blue-100 bg-gray-100 border-2 border-gray-300 focus:outline-gray-300 w-full p-4 rounded-lg"
                         placeholder="Post something"></textarea>
                     @error('body')
                         <div class="text-red-500 mt-2 text-sm">
@@ -27,7 +27,7 @@
 
             @if ($posts->count() > 0)
                 @foreach ($posts as $post)
-                    <div class="bg-gray-100 border border-gray-300 p-4 rounded mb-3">
+                    <div class="shadow-xl border-t border-white p-4 rounded mb-3">
                         <a class="text-sm font-bold"><span>@</span>{{ $post->user->username }} </a><span class="text-sm">{{$post->created_at->diffForHumans()}}</span>
                         <p>{{ $post->body }}</p>
                     </div>
