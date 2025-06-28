@@ -13,9 +13,9 @@
 
     <nav class="p-6 bg-white flex justify-between mb-6">
         <ul class="flex items-center">
-            <li><a class="p-3" href="">Home</a></li>
-            <li><a class="p-3" href="">Dahsboard</a></li>
-            <li><a class="p-3" href="">Posts</a></li>
+            <li><a class="p-3" href="{{route('home')}}">Home</a></li>
+            <li><a class="p-3" href="{{route('dashboard')}}">Dahsboard</a></li>
+            <li><a class="p-3" href="{{route('posts')}}">Posts</a></li>
         </ul>
 
 
